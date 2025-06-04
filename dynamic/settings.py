@@ -32,8 +32,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Loading devops configuration
 globals().update(DEVOPS_CONFIGURATION)
-print(f'{DEBUG}')
-print(f'{DATABASES}')
 
 # Application definition
 
