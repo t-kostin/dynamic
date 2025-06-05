@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'constance',
 ]
 
 MIDDLEWARE = [
@@ -72,7 +73,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'dynamic.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
@@ -110,7 +110,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'America/Toronto'
+# Moved to dynamic configuration by Constance
+# TIME_ZONE = 'America/Toronto'
+
+# Parameters that could change dynamically, using Constance
+CONSTANCE_CONFIG = {
+    'TIME_ZONE': ('America/Toronto', 'Time zone could be changed'),
+}
 
 USE_I18N = True
 

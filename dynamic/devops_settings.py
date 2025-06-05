@@ -13,4 +13,5 @@ DEVOPS_CONFIGURATION = {
         'default': env.db('DATABASE_URL'),
     },
     'ALLOWED_HOSTS': env.list('ALLOWED_HOSTS', default='localhost'),
+    'CONSTANCE_BACKEND': env('CONSTANCE_BACKEND'),
 }
